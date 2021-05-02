@@ -43,8 +43,8 @@ function searchHandler(req,res){
 }
 
 function BooksData(data){
-  this.title = data.volumeInfo.title;
-  this.authors = data.volumeInfo.authors;
+  this.title = data.volumeInfo.title || '* not available*';
+  this.authors = data.volumeInfo.authors || '* not available*';
   if(data.volumeInfo.description ) {
     this.description = data.volumeInfo.description;}else{
     this.description = '*The description is not available*';}
