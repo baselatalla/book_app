@@ -1,1 +1,97 @@
+@media only screen and (min-width:368px) and (max-width: 768px) {
+    body {
+      background-color: rgb(255, 190, 116);
+    }
+    main {
+        max-width: 90%;
+        margin: auto;
+    }
+    h1{
+        background-color: chocolate;
+        padding: 40px;
+        color: aliceblue;
+        text-align: center;
+        font-size: xx-large;
+    }
+    .resultField{
+        padding: 25px;
+        background-color: rgb(190, 178, 161,.5);
+        margin: 50px;
+    }
+    .resultList{
+        border-radius: 20px;
+        margin: 60px;
+        border: .9px solid tomato;
+        padding: 20px;
+
+    }
+    .resultList img{
+        width: 60%;
+        height: 300px ;
+    }
+    .resultList h1{
+        background-color: sienna;
+        font-weight: 700;
+        font-size: larger;
+        border-radius: 20px;
+        margin: 20px;
+        padding: 8px;
+    }
+    .resultList h2{
+        background-color: sienna;
+        font-weight: 500;
+        font-size: large;
+        border-radius: 20px;
+        margin: 20px;
+        padding: 8px;
+    }
+    .resultList p{
+        font-size: large;
+    }
+    #form{
+        font-size: xx-large;
+        padding: 20px;
+        margin: 50px;
+        border: .9 solid tomato;
+        text-align: center;
+    }
+    #form #searchh{
+        width: 80%;
+        height: 50px;
+
+    }
+    #searchh{
+        margin: 10px;
+    }
+    #form button{
+        width: 80%;
+        height: 50px;
+        font-size: xx-large;
+        margin: 20px;
+    }
+    input::placeholder {
+        color: rgb(247, 196, 30);
+        font-size: xx-large;
+        padding: 4px;
+        text-align: center;
+      }
+    input[type=radio] {
+        background-color: rgb(222, 184, 135,.5);
+        border: 0px;
+        width: 50px;
+        height: 2em;
+    }
+    #goForearch{
+        line-height: 60px;
+        margin: 50px;
+        width: 60%;
+        height: 100px;
+        background-color: tan;
+        color: rgb(255, 255, 255);
+        font-size: xx-large;
+        padding: 20px;
+    }
+  }
+
+
 

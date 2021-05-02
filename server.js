@@ -24,6 +24,9 @@ server.get('/searches/new', (req,res)=>{
 });
 server.post('/searches', searchHandler);
 
+server.get('*',(req,res)=>{
+  res.render('pages/error');
+});
 function searchHandler(req,res){
   let searchValue = req.body.search;
   let term = req.body.searchBy;
@@ -34,7 +37,7 @@ function searchHandler(req,res){
       res.render('pages/searches/show', {bookslistArr: bookslist });
     }).catch (error=>{
       console.log(error);
-      res.send(error);
+      res.render('pages/error');
     });
 
 }
@@ -44,7 +47,7 @@ function BooksData(data){
   this.authors = data.volumeInfo.authors;
   if(data.volumeInfo.description ) {
     this.description = data.volumeInfo.description;}else{
-    this.description = 'The description is not available';}
+    this.description = '*The description is not available*';}
   if (data.volumeInfo.imageLinks.thumbnail){
     this.image = data.volumeInfo.imageLinks.thumbnail;}else{
     this.image = `https://i.imgur.com/J5LVHEL.jpg`;}
