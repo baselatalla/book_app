@@ -1,4 +1,13 @@
-h1{
-    background-color: black;
-    color: white;
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: dimgray;
+}
+main{
+display:flexbox;
+flex-flow: column;
+text-align: center;
+justify-content: center;
+
 }
