@@ -20,19 +20,19 @@
     }
     .resultList{
         border-radius: 20px;
-        margin: 60px;
+        margin-top: 30px;
         border: .9px solid tomato;
         padding: 20px;
 
     }
     .resultList img{
         width: 60%;
-        height: 300px ;
+        height: auto;
     }
     .resultList h1{
         background-color: sienna;
         font-weight: 700;
-        font-size: larger;
+        font-size: medium;
         border-radius: 20px;
         margin: 20px;
         padding: 8px;
@@ -40,13 +40,13 @@
     .resultList h2{
         background-color: sienna;
         font-weight: 500;
-        font-size: large;
+        font-size: medium;
         border-radius: 20px;
         margin: 20px;
         padding: 8px;
     }
     .resultList p{
-        font-size: large;
+        font-size: medium;
     }
     #form{
         font-size: large;
