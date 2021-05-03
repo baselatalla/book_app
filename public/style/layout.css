@@ -6,7 +6,7 @@
         max-width: 90%;
         margin: auto;
     }
-    h1{
+    .h1{
         background-color: chocolate;
         padding: 40px;
         color: aliceblue;
@@ -31,23 +31,20 @@
     }
     .resultList h1{
         background-color: sienna;
-        font-weight: 350;
-        font-size: medium;
         border-radius: 20px;
         margin: 20px;
         padding: 8px;
         text-overflow: clip;
+        color: aliceblue;
+        letter-spacing: 1px;
     }
     .resultList h2{
         background-color: sienna;
-        font-weight: 300;
-        font-size: medium;
         border-radius: 20px;
         margin: 20px;
         padding: 8px;
     }
     .resultList p{
-        font-size: medium;
     }
     #form{
         font-size: large;
