@@ -1,4 +1,4 @@
-@media only screen and (min-width:300px) and (max-width: 768px) {
+@media only screen and (min-width:350px) and (max-width: 768px) {
     body {
       background-color: rgb(255, 190, 116);
     }
@@ -31,15 +31,16 @@
     }
     .resultList h1{
         background-color: sienna;
-        font-weight: 700;
+        font-weight: 350;
         font-size: medium;
         border-radius: 20px;
         margin: 20px;
         padding: 8px;
+        text-overflow: clip;
     }
     .resultList h2{
         background-color: sienna;
-        font-weight: 500;
+        font-weight: 300;
         font-size: medium;
         border-radius: 20px;
         margin: 20px;
