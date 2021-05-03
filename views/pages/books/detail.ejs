@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title> Book App </title>
+</head>
+<header>
+    <h1 class="h1">Book App</h1> <br><br>
+    <a href="/"><input type="button" id="goForearch" value="Home"></a>
+    <a href="/searches/new"><input type="button" id="goForearch1" value="search for book !"></a>
+    <hr>
+</header>
+<body>
+    <main>
+        <div class="resultList">
+            <img src="<%= book.image %>">
+                <h1><%= book.title %></h1>
+                <h2><%= book.authors %></h2>
+                <h2> ISBN :<%= book.isbn %></h2>
+                <p><%= book.description %></p>
+        </div>
+    </main>
+    <footer>
+        <P>&copy right</P>   
+      </footer>
+      </body>
+      </html>
