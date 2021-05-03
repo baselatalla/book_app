@@ -44,21 +44,22 @@ function searchHandler(req,res){
 }
 
 function addHandler(req,res){
-  let SQL = `SELECT * FROM books ;`;
-  client.query(SQL)
-    .then(result=>{
-      result.rows.forEach((n)=>{
-        console.log(n);
-        if(n.title === req.body.title && n.authors === req.body.authors){
-          res.redirect(`/bookDetail/${n.id}`);
-        }else { 
-          let SQL1 = `INSERT INTO books (authors,title,isbn,image,description) VALUES($1,$2,$3,$4,$5) RETURNING *;`;
-          let safevalues = [req.body.authors, req.body.title, req.body.ISBN, req.body.image, req.body.description];
-          client.query(SQL1, safevalues)
-            .then(result => {
-              res.redirect(`/bookDetail/${result.rows[0].id}`);
-            });} });
+  // let SQL = `SELECT * FROM books ;`;
+  // client.query(SQL)
+  //   .then(result=>{
+  //     result.rows.forEach((n)=>{
+  //       console.log(n);
+  //       if(n.title === req.body.title && n.authors === req.body.authors){
+  //         res.redirect(`/bookDetail/${n.id}`);
+  //       }else {
+  let SQL1 = `INSERT INTO books (authors,title,isbn,image,description) VALUES($1,$2,$3,$4,$5) RETURNING *;`;
+  let safevalues = [req.body.authors, req.body.title, req.body.isbn, req.body.image, req.body.description];
+  client.query(SQL1, safevalues)
+    .then(result => {
+      res.redirect(`/bookDetail/${result.rows[0].id}`);
     });
+  //  });
+  // });
 }
 
 function getOnebookDetails(req,res){
@@ -90,8 +91,8 @@ function BooksData(data){
     this.image = data.volumeInfo.imageLinks.thumbnail;}else{
     this.image = `https://i.imgur.com/J5LVHEL.jpg`;}
   if(data.volumeInfo.industryIdentifiers.length ){
-    this.ISBN = data.volumeInfo.industryIdentifiers[0].identifier;}else{
-    this.ISBN = 'NOT available';}
+    this.isbn = data.volumeInfo.industryIdentifiers[0].identifier;}else{
+    this.isbn = 'NOT available';}
 
 }
 
