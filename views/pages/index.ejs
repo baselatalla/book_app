@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <title> Book App </title>
-</head>
+
 <body>
-    <h1 class="h1">Book App</h1>
+    
     <main>
         <a href="/searches/new"><input type="button" id="goForearch" value="search for book !"></a>
+
+
+        <h3> saved books : <%= book.length %></h3>
+        <div class="resultField">
+            <%  book.forEach(book=>{ %>
+                <div class="resultList">
+                    <img src="<%= book.image %>"">
+                    <h1><%= book.title %></h1>
+                    <h2><%= book.authors %></h2>
+                    <br><br>
+                    <form action="/books" method="POST">
+                        <input type="hidden" name="title" value="<%= book.title %>">
+                        <input type="hidden" name="authors" value="<%= book.authors %>">
+                        <input type="hidden" name="image" value="<%= book.image %>">
+                        <input type="hidden" name="ISBN" value="<%= book.ISBN %>">
+                        <input type="hidden" name="description"value="<%= book.description %>">
+                        <input type="submit"  value="View Details">
+                    </form>
+    
+                </div>
+                
+            <% }) %>
+           
+        </div>
+
     </main>
 </body>
 </html>

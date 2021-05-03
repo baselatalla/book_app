@@ -19,8 +19,20 @@
                 <h1><%= book.title %></h1>
                 <h2><%= book.authors %></h2>
                 <p><%= book.description %></p>
+                <br><br>
+                <form action="/books" method="POST">
+                    <input type="hidden" name="title" value="<%= book.title %>">
+                    <input type="hidden" name="authors" value="<%= book.authors %>">
+                    <input type="hidden" name="image" value="<%= book.image %>">
+                    <input type="hidden" name="ISBN" value="<%= book.ISBN %>">
+                    <input type="hidden" name="description"value="<%= book.description %>">
+                    <input type="submit"  value="Add This Book">
+                </form>
+
             </div>
+            
         <% }) %>
+       
     </div>
     
 </main>
