@@ -27,13 +27,8 @@
                     <h1><%= book.title %></h1>
                     <h2><%= book.authors %></h2>
                     <br><br>
-                    <form action="/books" method="POST">
-                        <input type="hidden" name="title" value="<%= book.title %>">
-                        <input type="hidden" name="authors" value="<%= book.authors %>">
-                        <input type="hidden" name="image" value="<%= book.image %>">
-                        <input type="hidden" name="isbn" value="<%= book.isbn %>">
-                        <input type="hidden" name="description"value="<%= book.description %>">
-                        <input type="submit"  value="View Details">
+                   
+                        <a href="/bookDetail/<%= book.id %>"><button id="add">View Details</button> </a>
                     </form>
     
                 </div>
@@ -43,5 +38,8 @@
         </div>
 
     </main>
+    <footer>
+        <p> &copy All rights reserved </p>
+    </footer>
 </body>
 </html>

@@ -16,15 +16,21 @@
 <body>
     <main>
         <div class="resultList">
-            <img src="<%= book.image %>">
-                <h1><%= book.title %></h1>
-                <h2><%= book.authors %></h2>
-                <h2> ISBN :<%= book.isbn %></h2>
-                <p><%= book.description %></p>
+            <img class="resulitemtList" src="<%= book.image %>">
+                <h1 class="resulitemtList"><%= book.title %></h1>
+                <h2 class="resulitemtList"><%= book.authors %></h2>
+                <h2 class="resulitemtList"> ISBN :<%= book.isbn %></h2>
+                <p class="resulitemtList"><%= book.description %></p>
+
+                <br><br><br>
+        <%- include('edit') %>
+                
         </div>
     </main>
     <footer>
-        <P>&copy right</P>   
-      </footer>
+        <p> &copy All rights reserved </p>
+    </footer>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="/js/app.js"></script>
       </body>
       </html>
