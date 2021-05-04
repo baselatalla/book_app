@@ -79,11 +79,11 @@
         font-size: large;
         padding: 4px;
         text-align: center;
-      }
-      input[type="text"]{
-    font-size:24px;
     }
-
+    input[type="text"]{
+        font-size:24px;
+    }
+    
     input[type=radio] {
         background-color: rgb(222, 184, 135,.5);
         border: 0px;
@@ -100,6 +100,8 @@
         font-size: large;
         padding: 20px;
         margin-bottom: 20px;
+        border-radius: 20px;
+        border: white solid;
     }
     #goForearch1{
         line-height: auto;
@@ -110,6 +112,27 @@
         color: rgb(255, 255, 255);
         font-size: large;
         padding: 20px;
+        border-radius: 20px;
+        border: white solid;
+    }
+    #add{
+        padding: 10px;
+        border-radius: 50px;
+        font-size: 15px;
+        color: lavender;
+        background-color: black;
+        margin-top: 10px;
+        margin-bottom:10px;
+    }
+    footer{
+        clear: both;
+        background-color: rgba(88, 87, 87, 0.6);
+        text-align: center;
+        color:white;
+        height: 60px;
+    }
+    footer p{
+        position: relative; top: 15px;
     }
   }
   @media only screen and (min-width:768px) {
@@ -215,6 +238,8 @@
     font-size: large;
     padding: 20px;
     margin-bottom: 20px;
+    border-radius: 20px;
+    border: white solid;
     
 }
 #goForearch1{
@@ -226,6 +251,36 @@
     color: rgb(255, 255, 255);
     font-size: large;
     padding: 20px;
+    border: white solid;
+    border-radius: 20px;
 
   }
+  #add{
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: lavender;
+    background-color: black;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+#updateBtn{
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: lavender;
+    background-color: black;
+    margin-top: 10px;
+    margin-bottom:10px; 
+}
+footer{
+    
+    background-color: rgba(88, 87, 87, 0.6);
+    text-align: center;
+    color:white;
+    height: 60px;
+}
+footer p{
+    position: relative; top: 15px;
+}
   }
